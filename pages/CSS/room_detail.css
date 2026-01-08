@@ -1,246 +1,238 @@
 :root {
-    --primary-blue: #007bff;
-    --dark-blue: #045aaf;
-    --success-green: #4CAF50;
-    --light-bg: #f8f9fa;
-    --white: #ffffff;
-    --text-dark: #333;
-    --text-light: #666;
+  --primary-blue: #007bff;
+  --dark-blue: #045aaf;
+  --success-green: #4caf50;
+  --light-bg: #f8f9fa;
+  --white: #ffffff;
+  --text-dark: #333;
+  --text-light: #666;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
-
 .navbar {
-    background-color: var(--primary-blue); 
-    color: white;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar .logo {
-    font-size: 1.5em;
-    font-weight: bold;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .navbar nav a {
-    margin-left: 25px;
-    color: white;
-    padding: 5px 10px;
+  margin-left: 25px;
+  color: white;
+  padding: 5px 10px;
 }
 
-.navbar a:hover{
-    color: var(--success-green);
+.navbar a:hover {
+  color: var(--success-green);
 }
 
-.login-btn{
-    color: var(--white);
-    font-weight: 700;
+.login-btn {
+  color: var(--white);
+  font-weight: 700;
 }
 
-.login-btn:hover{
-    color: var(--success-green);
+.login-btn:hover {
+  color: var(--success-green);
 }
-
 
 .container {
-    padding: 20px 50px;
-    max-width: 1200px; 
-    margin: 0 auto;
+  padding: 20px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .back-link {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
-    display: block;
-    margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 20px;
 }
-
 
 .content-wrapper {
-    display: flex;
-    gap: 30px; 
-    margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
-
 .room-details-section {
-    flex: 2; 
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 2;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .room-image-placeholder {
-    height: 300px;
-    background-color: #dcdcdc; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #666;
-    margin-bottom: 20px;
+  height: 300px;
+  background-color: #dcdcdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 .room-info {
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
 }
 
 .posted-date {
-    text-align: right;
-    font-size: 0.9em;
-    color: #666;
-    margin: 0;
+  text-align: right;
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
 }
 
 .address {
-    margin: 10px 0;
-    line-height: 1.4;
+  margin: 10px 0;
+  line-height: 1.4;
 }
 
 .nearby {
-    font-size: 0.9em;
-    color: #666;
+  font-size: 0.9em;
+  color: #666;
 }
 
 .consider-title {
-    color: var(--text-dark); 
-    margin-top: 20px;
+  color: var(--text-dark);
+  margin-top: 20px;
 }
 
 .property-features {
-    display: flex;
-    gap: 50px; 
-    font-size: 0.95em;
-    margin-bottom: 15px;
+  display: flex;
+  gap: 50px;
+  font-size: 0.95em;
+  margin-bottom: 15px;
 }
 
 .property-features p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
-
-.book-button, .contact-button {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--primary-blue);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
+.book-button,
+.contact-button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
 }
 
-.book-button:hover, .contact-button:hover {
-    background-color: var(--dark-blue);
+.book-button:hover,
+.contact-button:hover {
+  background-color: var(--dark-blue);
 }
-
 
 .availability {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 5px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
 .availability h4 {
-    margin-top: 0;
-    margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .availability-grid {
-    display: flex;
-    justify-content: space-between; 
-    font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
 }
 
 .availability-grid > div p {
-    margin: 3px 0;
+  margin: 3px 0;
 }
 
-
-
 .room-owner-section {
-    flex: 1; 
+  flex: 1;
 }
 
 .owner-title {
-    color: #333;
-    padding: 10px;
-    background-color: white;
-    border-radius: 8px 8px 0 0;
-    margin-top: 0;
+  color: #333;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px 8px 0 0;
+  margin-top: 0;
 }
 
 .owner-profile {
-    background-color: white;
-    padding: 20px;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .profile-pic-placeholder {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #dcdcdc;
-    margin: 0 auto 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8em;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #dcdcdc;
+  margin: 0 auto 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
 }
 
 .owner-profile p {
-    margin: 5px 0;
-    line-height: 1.5;
+  margin: 5px 0;
+  line-height: 1.5;
 }
 
 .phone-number {
-    font-weight: bold;
-    color: var(--text-dark);
-    margin-bottom: 20px !important;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 20px !important;
 }
 
 .contact-button {
-    margin-top: 0;
+  margin-top: 0;
 }
-
 
 .google-map-section {
-    background-color: white;
-    padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    font-weight: bold;
-    color: #999;
+  background-color: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #999;
 }
-
 
 footer {
   text-align: center;
@@ -250,6 +242,151 @@ footer {
   animation: fadeInUp 1.2s ease-in both;
 }
 
-footer a:hover{
-    color: var(--success-green);
+footer a:hover {
+  color: var(--success-green);
+}
+
+/* --- Tablet Devices (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  /* General Spacing */
+  .container,
+  nav,
+  .navbar,
+  header {
+    padding: 15px 30px !important;
+  }
+
+  /* Post Room & Room Detail Content */
+  .content-wrapper,
+  .form-grid {
+    gap: 20px;
+  }
+
+  .room-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px;
+  }
+}
+
+/* --- Mobile Devices (max-width: 768px) --- */
+@media (max-width: 768px) {
+  /* Navbar Adjustments */
+  nav,
+  .navbar,
+  header,
+  .navbar-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    height: auto !important;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    font-size: 14px;
+  }
+
+  /* Hero & Titles */
+  .hero-section h1,
+  .form-title {
+    font-size: 26px !important;
+  }
+
+  /* Forms (Login, Signup, Contact, Post Room) */
+  .login-box,
+  .form-card,
+  .contact {
+    width: 95% !important;
+    max-width: none !important;
+    padding: 25px !important;
+    margin: 20px auto !important;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr !important; /* Single column */
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Room Detail Page */
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .room-details-section,
+  .room-owner-section {
+    flex: none !important;
+    width: 100%;
+  }
+
+  .property-features {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .google-map-section {
+    height: 200px;
+    font-size: 1.2em;
+  }
+
+  /* Home Page Grid */
+  .room-container {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+  }
+
+  .filter-form {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .input-group,
+  .budget-slider,
+  .apply-filters-btn {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+}
+
+/* --- Small Phones (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .container,
+  nav,
+  .navbar,
+  header {
+    padding: 15px 15px !important;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    margin: 5px !important;
+  }
+
+  .login-box h2,
+  .form-header h1 {
+    font-size: 20px !important;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-submit,
+  .btn-cancel {
+    width: 100%;
+  }
 }

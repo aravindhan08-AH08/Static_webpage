@@ -101,7 +101,6 @@ footer a:hover {
   color: var(--success-green);
 }
 
-
 .contact-form {
   margin-top: 20px;
 }
@@ -138,7 +137,6 @@ button:hover {
   background: #006fd1;
 }
 
-
 .contact-info {
   margin-top: 25px;
   animation: fadeInUp 1s ease-out both;
@@ -151,4 +149,149 @@ button:hover {
 
 .contact-info a:hover {
   text-decoration: underline;
+}
+
+/* --- Tablet Devices (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  /* General Spacing */
+  .container,
+  nav,
+  .navbar,
+  header {
+    padding: 15px 30px !important;
+  }
+
+  /* Post Room & Room Detail Content */
+  .content-wrapper,
+  .form-grid {
+    gap: 20px;
+  }
+
+  .room-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px;
+  }
+}
+
+/* --- Mobile Devices (max-width: 768px) --- */
+@media (max-width: 768px) {
+  /* Navbar Adjustments */
+  nav,
+  .navbar,
+  header,
+  .navbar-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    height: auto !important;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    font-size: 14px;
+  }
+
+  /* Hero & Titles */
+  .hero-section h1,
+  .form-title {
+    font-size: 26px !important;
+  }
+
+  /* Forms (Login, Signup, Contact, Post Room) */
+  .login-box,
+  .form-card,
+  .contact {
+    width: 95% !important;
+    max-width: none !important;
+    padding: 25px !important;
+    margin: 20px auto !important;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr !important; /* Single column */
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Room Detail Page */
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .room-details-section,
+  .room-owner-section {
+    flex: none !important;
+    width: 100%;
+  }
+
+  .property-features {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .google-map-section {
+    height: 200px;
+    font-size: 1.2em;
+  }
+
+  /* Home Page Grid */
+  .room-container {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+  }
+
+  .filter-form {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .input-group,
+  .budget-slider,
+  .apply-filters-btn {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+}
+
+/* --- Small Phones (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .container,
+  nav,
+  .navbar,
+  header {
+    padding: 15px 15px !important;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    margin: 5px !important;
+  }
+
+  .login-box h2,
+  .form-header h1 {
+    font-size: 20px !important;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-submit,
+  .btn-cancel {
+    width: 100%;
+  }
 }
