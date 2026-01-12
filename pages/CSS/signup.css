@@ -216,7 +216,7 @@ footer a:hover {
   }
 
   .form-grid {
-    grid-template-columns: 1fr !important; /* Single column */
+    grid-template-columns: 1fr !important;
   }
 
   .amenities-grid {
