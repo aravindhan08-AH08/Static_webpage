@@ -7,9 +7,9 @@
     <title>Bachelor Life - Create Account</title>
   </head>
   <body>
-    <header>
+    <header class="navbar">
       <div class="logo">Bachelor Life</div>
-      <nav>
+      <nav class="nav-links">
         <a href="/index.html">Home</a>
         <a href="../HTML/find_room.html">Find Rooms</a>
         <a href="../HTML/post_room.html">Post Room</a>
@@ -19,36 +19,87 @@
 
     <div class="container">
       <div class="form-card">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/25/25694.png"
-          alt="home icon"
-        />
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="home icon" class="home-icon" />
         <h2>Create Account</h2>
         <p>Join Bachelor Life today</p>
 
         <div class="tab-buttons">
-          <button class="tab active">Bachelor</button>
-          <button class="tab">Room Owner</button>
+          <button type="button" class="tab active" id="bachelorTab">Bachelor</button>
+          <button type="button" class="tab" id="ownerTab">Room Owner</button>
         </div>
 
-        <form id="form">
-          <input type="text" placeholder="Enter your full name" />
-          <input type="text" placeholder="Enter your phone number" />
-          <input type="email" placeholder="Enter your email" />
-          <input type="password" placeholder="Create a password" />
+        <form id="signupForm">
+          <div style="text-align: left; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #1e293b;">Full Name</div>
+          <input type="text" id="fullName" placeholder="Enter your full name" required />
+
+          <div style="text-align: left; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #1e293b;">Phone Number</div>
+          <input type="text" id="phone" placeholder="Enter your phone number" required />
+
+          <div style="text-align: left; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #1e293b;">Email Address</div>
+          <input type="email" id="email" placeholder="Enter your email" required />
+
+          <div style="text-align: left; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #1e293b;">Password</div>
+          <input type="password" id="password" placeholder="Create a password" required />
+    
+          <input type="hidden" id="userRole" value="Bachelor">
           <button type="submit" class="btn-create">Create Account</button>
         </form>
 
         <p class="signin-text">
-          Already have an account?
-          <a href="../HTML/login.html">Sign in</a>
+          Already have an account? <a href="../HTML/login.html">Sign in</a>
         </p>
       </div>
     </div>
-    <footer>
-      <p>© 2025 Bachelor Life | All Rights Reserved</p>
-      <a href="../HTML/about.html">About Us |</a>
-      <a href="../HTML/contact.html">Contact</a>
-    </footer>
-  </body>
+
+    </body>
+    <script>
+      const bachelorTab = document.getElementById('bachelorTab');
+      const ownerTab = document.getElementById('ownerTab');
+      const userRoleInput = document.getElementById('userRole');
+
+      bachelorTab.onclick = () => {
+        bachelorTab.classList.add('active');
+        ownerTab.classList.remove('active');
+        userRoleInput.value = "Bachelor";
+      };
+
+      ownerTab.onclick = () => {
+        ownerTab.classList.add('active');
+        bachelorTab.classList.remove('active');
+        userRoleInput.value = "Owner";
+      };
+
+
+      document.getElementById('signupForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const userData = {
+          fullName: document.getElementById('fullName').value,
+          phone: document.getElementById('phone').value,
+          email: document.getElementById('email').value,
+          password: document.getElementById('password').value,
+          role: userRoleInput.value
+        };
+
+        console.log("Sending data to backend:", userData);
+
+        try {
+          const response = await fetch('http://localhost:5000/api/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(userData)
+          });
+
+          if (response.ok) {
+            alert("Account Created Successfully! Please Login.");
+            window.location.href = "../HTML/login.html";
+          } else {
+            alert("Error creating account. Try again.");
+          }
+        } catch (error) {
+          console.error("Backend connect aagala:", error);
+          alert("Backend server off-la iruku. Connect panna help venuma?");
+        }
+      });
+    </script>
 </html>

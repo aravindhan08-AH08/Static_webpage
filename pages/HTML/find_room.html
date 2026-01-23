@@ -205,4 +205,17 @@
 </footer>
 
   </body>
+  <script>
+  document.querySelectorAll('.contact-btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+      if (!isLoggedIn) {
+        e.preventDefault();
+        alert("Please Login to view room details and contact owner!");
+        window.location.href = "../HTML/login.html";
+      }
+    });
+  });
+</script>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,20 +25,29 @@
         <h2>Welcome Back</h2>
         <p>Sign in to your Bachelor Life account</p>
 
-        <form>
+        <form id="loginForm">
           <div class="input-group">
             <label>Email Address</label>
-            <input type="email" placeholder="Enter your email" required />
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
           </div>
 
           <div class="input-group">
             <label>Password</label>
-            <input type="password" placeholder="Enter your password" required />
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
           </div>
 
-          <button type="submit" class="btn" href="../HTML/login.html">
-            Sign In
-          </button>
+          <button type="submit" class="btn">Sign In</button>
+
         </form>
 
         <p class="signup-text">
@@ -52,4 +61,21 @@
       <a href="../HTML/contact.html">Contact</a>
     </footer>
   </body>
+  <script>
+    document
+      .getElementById("loginForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value;
+
+        if (email) {
+          localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("userEmail", email);
+
+          alert("Login Successful!");
+          window.location.href = "../HTML/find_room.html";
+        }
+      });
+  </script>
 </html>
