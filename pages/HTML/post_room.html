@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -126,4 +126,20 @@
       <a href="../HTML/contact.html">Contact</a>
     </footer>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const isLoggedIn = localStorage.getItem("isLoggedIn");
+      const userRole = localStorage.getItem("currentUserRole");
+
+      if (!isLoggedIn) {
+        alert("Please login to access this page.");
+        window.location.href = "../HTML/login.html";
+      } else if (userRole === "Bachelor") {
+        alert(
+          "Access Denied! Bachelors are not allowed to post rooms. Only Owners can list rooms.",
+        );
+        window.location.href = "../HTML/find_room.html";
+      }
+    });
+  </script>
 </html>

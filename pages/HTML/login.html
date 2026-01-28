@@ -47,7 +47,6 @@
           </div>
 
           <button type="submit" class="btn">Sign In</button>
-
         </form>
 
         <p class="signup-text">
@@ -66,14 +65,16 @@
       .getElementById("loginForm")
       .addEventListener("submit", function (e) {
         e.preventDefault();
-
         const email = document.getElementById("email").value;
 
         if (email) {
           localStorage.setItem("isLoggedIn", "true");
           localStorage.setItem("userEmail", email);
 
-          alert("Login Successful!");
+          const userRole = localStorage.getItem("storedRole") || "Bachelor";
+          localStorage.setItem("currentUserRole", userRole);
+
+          alert("Login Successful as " + userRole);
           window.location.href = "../HTML/find_room.html";
         }
       });
